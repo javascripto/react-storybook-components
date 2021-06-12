@@ -1,11 +1,14 @@
 import { Fragment } from 'react';
 import { createGlobalStyle } from 'styled-components';
 
+import LoadingSpinner from './components/LoadingSpinner';
+
 export default function App() {
   return (
     <Fragment>
       <GlobalStyle />
-      <h1>App</h1>
+      <h1>Loading</h1>
+      <LoadingSpinner />
     </Fragment>
   );
 }
