@@ -1,9 +1,18 @@
 import { Story, Meta } from '@storybook/react';
+import { ThemeProvider } from 'styled-components';
 import { LoadingSpinner, LoadingSpinnerProps } from '../components';
 
 const Template: Story<LoadingSpinnerProps> = (args) => (
   <LoadingSpinner {...args} />
 );
+
+Template.decorators = [
+  (Story) => (
+    <ThemeProvider theme={{}}>
+      <Story />
+    </ThemeProvider>
+  ),
+];
 
 export const Default = Template.bind({});
 
