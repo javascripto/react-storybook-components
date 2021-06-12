@@ -1,7 +1,7 @@
 import { Property } from 'csstype';
 import styled, { keyframes } from 'styled-components';
 
-interface Props {
+export interface LoadingSpinnerProps {
   speed?: string;
   size?: keyof typeof sizes;
   color?: Property.Color;
@@ -22,7 +22,7 @@ const rotate = keyframes`
   }
 `;
 
-export const LoadingSpinner = styled.span<Props>`
+export const LoadingSpinner = styled.span<LoadingSpinnerProps>`
   border-radius: 50%;
   display: inline-block;
   width: ${({ size }) => sizes[size ?? 'md']};
